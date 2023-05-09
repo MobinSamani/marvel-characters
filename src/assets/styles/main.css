@@ -1,0 +1,67 @@
+@import "./tailwind.css";
+@import "./transitions.css";
+@import "./toast.css";
+
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("roboto"), url("../fonts/roboto/regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("roboto"), url("../fonts/roboto/light.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 600;
+  src: local("roboto"), url("../fonts/roboto/bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+html {
+  font-family: "roboto" !important;
+  scroll-behavior: smooth;
+}
+
+/* Custom Selection  */
+/* Firefox */
+::-moz-selection {
+  color: #18181b; ; /* zinc-900 */
+  background: #fafafa; /* zinc-50 */
+}
+
+/* Chrome, Edge, and Safari */
+::selection {
+  background: #fafafa; /* zinc-50 */
+  color: #18181b; ; /* zinc-900 */
+}
+
+/* Custom Scrollbar  */
+/* Firefox */
+html, .overflow-y-auto, .overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #18181b #27272a; /* zinc-900 zinc-800 */
+}
+
+/* Chrome, Edge, and Safari */
+html::-webkit-scrollbar, .overflow-y-auto::-webkit-scrollbar, .overflow-x-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb, .overflow-y-auto::-webkit-scrollbar-thumb, .overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: #18181b; /* zinc-900 */
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-track, .overflow-y-auto::-webkit-scrollbar-track, .overflow-x-auto::-webkit-scrollbar-track {
+  background: #27272a; /* zinc-800 */
+  border-radius: 8px;
+}
