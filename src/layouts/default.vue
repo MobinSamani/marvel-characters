@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <nuxt-loading-indicator color="#fafafa" />
+    <nuxt-loading-indicator color="#ed1d24" />
 
     <app-header />
 

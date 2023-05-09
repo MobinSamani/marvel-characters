@@ -38,7 +38,7 @@
 
 <script>
 import Btn from "@/components/shared/btn.vue";
-import Character from "@/components/character.vue";
+import Character from "@/components/character/item.vue";
 import CInput from "@/components/shared/inputs/c-input.vue";
 import EmptyList from "@/components/shared/empty-list.vue";
 import Loading from "@/components/shared/loading.vue";
