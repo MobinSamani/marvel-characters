@@ -11,6 +11,10 @@ git clone https://github.com/MobinSamani/marvel-characters.git
 
 cd ./marvel-characters
 
+cp ./.env.example ./.env
+
+# Edit .env file and set your Marvel API Key
+
 npm install
 
 npm run dev
