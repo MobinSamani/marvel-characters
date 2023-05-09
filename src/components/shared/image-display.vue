@@ -1,9 +1,9 @@
 <template>
   <div>
-    <img v-if="value" :src="`${$config.apiUrl}/${value}`" :width="width" :height="height" class="max-w-full h-auto" />
+    <img v-if="value" :src="`${$config.public.apiUrl}/${value}`" :width="width" :height="height" class="max-w-full h-auto" />
 
     <div v-else class="flex items-center justify-center bg-zinc-100 text-zinc-500 max-w-full h-auto" :style="`width: ${width}px; height: ${width}px`">
-      {{ $config.appName }}
+      {{ $config.public.appName }}
     </div>
   </div>
 </template>

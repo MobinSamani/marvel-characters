@@ -1,5 +1,5 @@
 <template>
-  <div v-if="total > $config.itemsCount" class="flex items-center justify-center flex-wrap gap-x-2">
+  <div v-if="total > $config.public.itemsCount" class="flex items-center justify-center flex-wrap gap-x-2">
     <btn
       icon="angles-left"
       icon-class="fa-sm"
@@ -54,7 +54,7 @@ export default {
   },
   computed: {
     maxPageNumber() {
-      return Math.ceil(this.total / this.$config.itemsCount);
+      return Math.ceil(this.total / this.$config.public.itemsCount);
     },
     classes() {
       return "rounded-full min-w-[38px] max-w-[38px] min-h-[38px] max-h-[38px] !p-0 text-lg";
