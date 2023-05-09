@@ -39,7 +39,7 @@ export default {
   computed: {
     classes() {
       return {
-        [`py-3 px-6 flex justify-center items-center relative gap-x-2 duration-150 outline-none`]: true,
+        [`py-3 px-6 flex justify-center items-center relative gap-x-2 duration-150 outline-none rounded-lg`]: true,
         "w-full": this.block,
         "opacity-50": this.disabled
       };

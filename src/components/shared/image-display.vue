@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <img v-if="value" :src="`${$config.public.apiUrl}/${value}`" :width="width" :height="height" class="max-w-full h-auto" />
+  <div class="w-full h-full">
+    <img v-if="value" :src="value" :width="width" :height="height" class="max-w-full h-auto" />
 
-    <div v-else class="flex items-center justify-center bg-zinc-100 text-zinc-500 max-w-full h-auto" :style="`width: ${width}px; height: ${width}px`">
-      {{ $config.public.appName }}
-    </div>
+    <div v-else class="flex items-center justify-center bg-zinc-900 text-zinc-600 w-full h-full text-xl min-h-[280px]">No Image</div>
   </div>
 </template>
 

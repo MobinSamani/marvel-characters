@@ -13,9 +13,9 @@ export default defineNuxtConfig({
       apiUrl: process.env.ENV_API_URL,
       appName: process.env.ENV_APP_NAME,
       appDescription: process.env.ENV_APP_DESCRIPTION,
-      itemsCount: 20
+      itemsCount: 20,
+      publicKey: process.env.ENV_PUBLIC_KEY
     },
-    publicKey: process.env.ENV_PUBLIC_KEY,
     privateKey: process.env.ENV_PRIVATE_KEY
   },
   build: {

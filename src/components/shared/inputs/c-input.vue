@@ -60,7 +60,7 @@ export default {
     classes() {
       return [
         {
-          "bg-zinc-900 border border-zinc-900 flex items-center duration-150": true,
+          "bg-zinc-900 border border-zinc-900 flex items-center duration-150 rounded-lg": true,
           "!border-red-500": this.error,
           "pl-4": !this.icon,
           "pr-4": !this.$slots.append

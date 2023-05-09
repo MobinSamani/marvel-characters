@@ -3,7 +3,6 @@ import ErrorHandler from "@/services/error-handler.js";
 import MD5 from "crypto-js/md5";
 
 function onResponse(res, ctx) {
-  console.log(res);
   const response = res.response || res;
 
   if (!response) {
@@ -21,16 +20,21 @@ export default defineNuxtPlugin((nuxtApp) => {
   const ctx = app.config.globalProperties;
   const config = nuxtApp.$config;
   const ts = Date.now();
-  const publicKey = config.publicKey;
+  const publicKey = config.public.publicKey;
   const privateKey = config.privateKey;
+
+  const params = {
+    apikey: publicKey
+  };
+
+  if (privateKey) {
+    params.ts = ts;
+    params.hash = MD5(ts + privateKey + publicKey).toString();
+  }
 
   const axios = Axios.create({
     baseURL: `${config.public.apiUrl}/v1`,
-    params: {
-      ts,
-      apikey: publicKey,
-      hash: MD5(ts + privateKey + publicKey).toString()
-    },
+    params,
     headers: {
       common: {
         Accept: "application/json"
